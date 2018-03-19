@@ -3,7 +3,6 @@ package com.taotao.dstTest.mapping;
 import com.taotao.dstTest.model.ZtUser;
 import com.taotao.dstTest.model.ZtUserExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface ZtUserMapper {
     long countByExample(ZtUserExample example);
@@ -20,9 +19,9 @@ public interface ZtUserMapper {
 
     ZtUser selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") ZtUser record, @Param("example") ZtUserExample example);
+    int updateByExampleSelective( ZtUser record,  ZtUserExample example);
 
-    int updateByExample(@Param("record") ZtUser record, @Param("example") ZtUserExample example);
+    int updateByExample( ZtUser record, ZtUserExample example);
 
     int updateByPrimaryKeySelective(ZtUser record);
 
